@@ -1,0 +1,129 @@
+/* ========================= */
+/*       CLIENTS SECTION     */
+/* ========================= */
+
+.clients-section {
+  padding: 100px 0;
+  background: #f8fbff;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================= */
+/*        HEADER             */
+/* ========================= */
+
+.clients-header {
+  max-width: 750px;
+  margin: 0 auto 60px auto;
+}
+
+.clients-badge {
+  display: inline-block;
+  background: #e6f0ff;
+  color: #003366;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.clients-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 18px;
+}
+
+.clients-header h2 span {
+  color: #003366;
+}
+
+.clients-header p {
+  font-size: 17px;
+  color: #5c677d;
+  line-height: 1.7;
+}
+
+/* ========================= */
+/*        SLIDER             */
+/* ========================= */
+
+.clients-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.clients-track {
+  display: flex;
+  gap: 60px;
+  animation: scroll-left 25s linear infinite;
+}
+
+.clients-track img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
+
+.clients-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+/* Smooth infinite scroll */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.clients-slider:hover .clients-track {
+  animation-play-state: paused;
+}
+
+/* ========================= */
+/*        RESPONSIVE         */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .clients-track {
+    gap: 40px;
+  }
+
+  .clients-track img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .clients-header h2 {
+    font-size: 28px;
+  }
+
+  .clients-header p {
+    font-size: 15px;
+  }
+
+  .clients-track img {
+    width: 100px;
+  }
+}

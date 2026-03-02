@@ -1,0 +1,18 @@
+[
+  {
+    "id": "smart-hospital-design",
+    "title": "Improving Patient Experience with Smart Hospital Design",
+    "excerpt": "Discover how evidence-based design principles are transforming healthcare facilities and boosting patient recovery rates by up to 25%.",
+    "image": "/assets/images/slide1.jpeg",
+    "date": "March 15, 2024",
+    "readTime": "5 min read"
+  },
+  {
+    "id": "nabh-accreditation-guide",
+    "title": "NABH Accreditation: Complete Guide for Hospitals",
+    "excerpt": "A practical breakdown of the NABH accreditation process and how hospitals can prepare effectively.",
+    "image": "/assets/images/slide2.jpeg",
+    "date": "April 2, 2024",
+    "readTime": "7 min read"
+  }
+]

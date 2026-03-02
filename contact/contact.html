@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | DianaMik Hospital Management Consultancy LLP</title>
+    <link rel="stylesheet" href="/css/style.css?v=1.0.1" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <!-- ====== CONTACT US ====== -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <!-- Header -->
+        <div class="contact__header">
+          <span class="contact__badge">Get in Touch</span>
+          <h2 class="contact__title">Let's Discuss Your Healthcare Project</h2>
+          <p class="contact__subtitle">
+            Share your requirements and our team will respond within 24 hours.
+          </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="contact__grid">
+          <!-- Form -->
+          <div class="contact__card contact__form">
+            <h3>Send a Message</h3>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="YOUR_ACCESS_KEY_HERE"
+              />
+              <input type="hidden" name="redirect" value="/thankyou.html" />
+              <input type="checkbox" name="botcheck" style="display: none" />
+
+              <div class="form__group">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="you@email.com"
+                    required
+                  />
+                </div>
+                <div class="form__group">
+                  <label>Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+91 XXXXX XXXXX"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label>Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Project Inquiry"
+                  required
+                />
+              </div>
+
+              <div class="form__group">
+                <label>Message</label>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us about your project..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Info Panel -->
+          <div class="contact__card contact__info">
+            <h3>Contact Information</h3>
+
+            <div class="info">
+              <div class="info__item">
+                <span class="info__icon">📞</span>
+                <div>
+                  <span class="info__label">Phone</span>
+                  <p>
+                    <a href="tel:+919913134461">+91 99131 34461</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="info__item">
+                <span class="info__icon">✉️</span>
+                <div>
+                  <span class="info__label">Email</span>
+                  <p>
+                    <a href="mailto:info@dianamik.com">info@dianamik.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="info__item">
+                <span class="info__icon">📍</span>
+                <div>
+                  <span class="info__label">Address</span>
+                  <p class="contact-address">
+                    <a
+                      href="https://www.google.com/maps?q=4th+Floor,+Nakshatra+Arcade,+IOC+Rd,+Chandkheda,+Ahmedabad,+Gujarat+382424"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      4th Floor, Nakshatra Arcade,<br />
+                      IOC Rd, Chandkheda,<br />
+                      Ahmedabad, Gujarat 382424
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__map">
+              <iframe
+                src="https://www.google.com/maps?q=4th%20Floor%2C%20Nakshatra%20Arcade%2C%20IOC%20Rd%2C%20Chandkheda%2C%20Ahmedabad%2C%20Gujarat%20382424&output=embed"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+    <script src="/js/include.js?v=1.0.0"></script>
+  </body>
+</html>

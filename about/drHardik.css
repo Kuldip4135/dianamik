@@ -1,0 +1,99 @@
+/* ========================= */
+/*     ABOUT FOUNDER         */
+/* ========================= */
+
+.about-founder {
+  padding: 100px 0;
+  background: #f8fbff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.founder-card {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 60px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* Image */
+
+.founder-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.founder-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #e6f0ff;
+}
+
+/* Content */
+
+.founder-content {
+  flex: 2;
+  max-width: 650px;
+}
+
+.founder-content h2 {
+  font-size: 2.2rem;
+  color: #0d1b2a;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.founder-content h2 span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #003366;
+}
+
+.founder-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0077b6;
+  margin-bottom: 22px;
+}
+
+.founder-content p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* ========================= */
+/*        RESPONSIVE         */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .founder-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  .founder-content {
+    max-width: 100%;
+  }
+
+  .founder-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .founder-content h2 {
+    font-size: 1.8rem;
+  }
+}
