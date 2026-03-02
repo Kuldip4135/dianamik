@@ -13,14 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div class="blog-content">
-        <div class="blog-meta">
-          <span class="blog-date">${blog.date}</span>
-          <span class="blog-read-time">${blog.readTime}</span>
-        </div>
+    
 
         <h3 class="blog-title">${blog.title}</h3>
 
-        <p class="blog-excerpt">${blog.excerpt}</p>
 
         <div class="blog-footer">
           <span class="read-more">Read Article →</span>
