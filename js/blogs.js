@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Redirect when clicked
     article.addEventListener("click", () => {
-      window.location.href = `/blog-details.html?id=${blog.id}`;
+      window.location.href = `/blogs/blogDetails.html?id=${blog.id}`;
     });
 
     container.appendChild(article);

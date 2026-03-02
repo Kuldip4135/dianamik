@@ -85,7 +85,7 @@
 
 .blog-body {
   margin-top: 50px;
-  max-width: 750px; /* narrower reading column */
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
 }
