@@ -40,17 +40,18 @@ body {
   color: #fff;
   font-size: 13px;
   padding: 6px 0;
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  z-index: 1001;
+  z-index: 1001; */
 }
 
 .top-info {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -69,10 +70,13 @@ body {
 /*        MAIN NAVBAR        */
 /* ========================= */
 
-.main-navbar {
+#header {
   position: sticky;
   top: 0;
   z-index: 1002;
+}
+
+.main-navbar {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -207,18 +211,57 @@ body {
 /* ========================= */
 /*         HAMBURGER         */
 /* ========================= */
+/* ===== HAMBURGER BASE ===== */
 
 .menu-toggle {
+  width: 30px;
+  height: 22px;
+  position: relative;
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-between;
   cursor: pointer;
 }
 
 .menu-toggle span {
-  width: 26px;
+  position: absolute;
+  width: 100%;
   height: 3px;
   background: #333;
+  left: 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Position lines properly */
+.menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-toggle span:nth-child(3) {
+  bottom: 0;
+}
+
+/* ===== PERFECT X TRANSFORMATION ===== */
+
+.menu-toggle.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 /* ========================= */
@@ -250,9 +293,9 @@ body {
     width: 100%;
   }
 
-  .nav-links a {
+  .nav-links a:not(.book-btn) {
     width: 100%;
-    padding: 12px 0;
+    /* padding: 12px 0; */
   }
 
   /* Disable hover dropdown */

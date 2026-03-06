@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show-menu");
+    menuToggle.classList.toggle("active");
   });
 
   dropdowns.forEach((drop) => {
