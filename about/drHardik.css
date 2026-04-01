@@ -1,99 +1,104 @@
-/* ========================= */
-/*     ABOUT FOUNDER         */
-/* ========================= */
-
-.about-founder {
-  padding: 100px 0;
-  background: #f8fbff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.founder-card {
+.about-header {
   display: flex;
+  flex-direction: column; /* mobile first */
   align-items: center;
-  gap: 60px;
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 60px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  gap: 15px;
+  padding: 25px 15px;
 }
 
-/* Image */
-
-.founder-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.founder-image img {
-  width: 280px;
-  height: 280px;
+/* IMAGE */
+.profile-img {
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #e6f0ff;
+  border: 4px solid #1a73e8;
 }
 
-/* Content */
-
-.founder-content {
-  flex: 2;
-  max-width: 650px;
-}
-
-.founder-content h2 {
-  font-size: 2.2rem;
-  color: #0d1b2a;
+/* TEXT */
+.about-right h1 {
+  font-size: 26px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
-.founder-content h2 span {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #003366;
-}
-
-.founder-content h4 {
-  font-size: 1.1rem;
+.title {
+  font-size: 16px;
+  color: #1a73e8;
   font-weight: 600;
-  color: #0077b6;
-  margin-bottom: 22px;
+  margin-bottom: 5px;
 }
 
-.founder-content p {
-  font-size: 1.02rem;
-  line-height: 1.75;
-  color: #444;
-  margin-bottom: 16px;
+.tagline {
+  font-size: 14px;
+  color: #666;
+  max-width: 300px;
 }
 
-/* ========================= */
-/*        RESPONSIVE         */
-/* ========================= */
+/* SECTION */
+.section {
+  margin-bottom: 20px;
+}
 
-@media (max-width: 992px) {
-  .founder-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 25px;
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1a73e8;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.section ul {
+  padding-left: 18px;
+}
+
+.section ul li {
+  margin-bottom: 6px;
+}
+
+/* CONTACT */
+.contact p {
+  margin-bottom: 5px;
+}
+
+/* CARD */
+.card {
+  padding: 15px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
   }
 
-  .founder-content {
-    max-width: 100%;
+  .about-header {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    justify-content: center;
   }
 
-  .founder-image img {
-    width: 220px;
-    height: 220px;
+  .profile-img {
+    width: 160px;
+    height: 160px;
   }
 
-  .founder-content h2 {
-    font-size: 1.8rem;
+  .about-right h1 {
+    font-size: 32px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .tagline {
+    font-size: 15px;
   }
 }

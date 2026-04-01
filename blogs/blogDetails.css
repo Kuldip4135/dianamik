@@ -97,6 +97,88 @@
   margin-bottom: 30px;
 }
 
+.blog-body ul,
+.blog-body ol {
+  margin: 0 0 30px 1.4em;
+  padding-left: 1.2em;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.85;
+  font-family: inherit;
+  list-style-position: inside;
+}
+
+.blog-body li {
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.blog-body ul li::marker,
+.blog-body ol li::marker {
+  color: #003366;
+  font-weight: 700;
+}
+
+.blog-body ul ul,
+.blog-body ol ol {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.blog-body h2 {
+  font-size: 32px;
+  margin: 40px 0 20px;
+  color: #111;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.blog-body h3 {
+  font-size: 28px;
+  margin: 30px 0 15px;
+  color: #111;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.blog-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.blog-body th,
+.blog-body td {
+  border: 1px solid #e3e8ef;
+  padding: 16px 18px;
+  text-align: left;
+  vertical-align: top;
+  color: #444;
+}
+
+.blog-body th {
+  background: #f5f8fc;
+  font-weight: 600;
+}
+
+.blog-body tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+.blog-body caption {
+  caption-side: bottom;
+  padding-top: 10px;
+  color: #667085;
+  font-size: 14px;
+}
+
 /* ===== Responsive ===== */
 
 @media (max-width: 992px) {

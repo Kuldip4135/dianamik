@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   if (!preloader) return;
 
-  const minDisplayTime = 200;
+  const minDisplayTime = 20;
   const startTime = performance.now();
 
   const elapsed = performance.now() - startTime;

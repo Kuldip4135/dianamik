@@ -130,9 +130,43 @@ body {
   border-radius: 6px;
 }
 
-.nav-links a:not(.book-btn):hover {
-  background: #f3f6fa;
-  color: #003366;
+.nav-links a:not(.book-btn) {
+  position: relative;
+  overflow: hidden;
+  /* Remove background and color changes here if present */
+}
+
+.nav-links a:not(.book-btn)::before,
+.nav-links a:not(.book-btn)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0b5cae; /* or your desired border color */
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a:not(.book-btn)::before {
+  top: 0;
+}
+
+.nav-links a:not(.book-btn)::after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+.nav-links a:not(.book-btn):hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.nav-links a:not(.book-btn):hover::after {
+  width: 100%;
+  right: 0;
+  left: auto;
 }
 
 /* ========================= */
@@ -731,19 +765,36 @@ body {
   line-height: 1.7;
 }
 
-/* Grid */
+/* Grid - Updated for card layout */
 
 .expertise__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 60px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive cards */
+  gap: 40px;
 }
 
-/* Items */
+/* Items - Now styled as cards */
 
 .expertise__item {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e3e8ef;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #e3e8ef;
+}
+
+.expertise__item img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency; adjust as needed */
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .expertise__item h3 {
@@ -777,6 +828,18 @@ body {
   transform: translateX(5px);
 }
 
+/* Hover effect with orange color */
+
+.expertise__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3); /* Orange shadow */
+  border-color: #ff6b00; /* Orange border on hover */
+}
+
+.expertise__item:hover h3 {
+  color: #ff6b00; /* Orange text on hover */
+}
+
 /* Responsive */
 
 @media (max-width: 992px) {
@@ -784,6 +847,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 /* ====== STATS SECTION - MODERN DESIGN ====== */
 .stats-section {
   position: relative;
@@ -1344,6 +1408,7 @@ body {
     width: 95%;
   }
 }
+
 /* ===== WHY SECTION ===== */
 
 .why {
@@ -1389,25 +1454,47 @@ body {
   line-height: 1.7;
 }
 
-/* Grid */
-
+/* Updated Grid - Card-based and responsive */
 .why__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px 70px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Auto-adjusts columns: 3+ on large screens, fewer on smaller */
+  gap: 30px; /* Reduced gap for tighter card layout */
+  justify-items: center; /* Centers cards horizontally */
+  align-items: stretch; /* Ensures cards stretch to equal height */
 }
 
-/* Items */
-
+/* Updated Items - Now styled as modern cards */
 .why__item {
-  border-left: 3px solid #003366;
-  padding-left: 20px;
+  background: #ffffff; /* White background for card effect */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 30px 25px; /* Generous padding inside cards */
+  border: 1px solid #e3e8ef; /* Light border for definition */
+  transition: all 0.3s ease; /* Smooth hover transitions */
+  text-align: center; /* Center-align content for card feel */
+  position: relative; /* For potential pseudo-elements */
+  overflow: hidden; /* Prevents shadow overflow on hover */
+}
+
+.why__item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3); /* Enhanced shadow with orange tint (matches your site's accent) */
+  border-color: #ff6b00; /* Orange border on hover for emphasis */
 }
 
 .why__item h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 20px; /* Slightly larger for card prominence */
+  margin-bottom: 15px;
   color: #0d1b2a;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.why__item:hover h3 {
+  color: #ff6b00; /* Orange text on hover */
 }
 
 .why__item p {
@@ -1416,13 +1503,43 @@ body {
   line-height: 1.6;
 }
 
-/* Responsive */
+/* Icon Styling for Why Cards */
+.why__icon {
+  font-size: 48px; /* Large, prominent size */
+  color: #003366; /* Matches your primary color */
+  margin-bottom: 15px; /* Space below icon */
+  display: block; /* Centers the icon */
+  text-align: center; /* Ensures centering */
+  transition: all 0.3s ease; /* Smooth hover transitions */
+}
 
+.why__item:hover .why__icon {
+  color: #ff6b00; /* Orange on hover, matching card accent */
+  transform: scale(1.1); /* Slight zoom for interactivity */
+}
+
+/* Responsive adjustments */
 @media (max-width: 992px) {
   .why__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* 2 columns on tablets */
+    gap: 25px;
   }
 }
+
+@media (max-width: 768px) {
+  .why__grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 20px;
+  }
+
+  .why__item {
+    padding: 25px 20px; /* Slightly less padding on small screens */
+  }
+}
+
 /* ===== CLIENTS SECTION ===== */
 
 .clients {
