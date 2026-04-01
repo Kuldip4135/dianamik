@@ -1378,6 +1378,7 @@ body {
   background: transparent;
   border-radius: 16px;
   padding: 20px 0;
+  min-height: 500;
 }
 
 /* Elfsight override fixes */
