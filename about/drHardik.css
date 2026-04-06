@@ -5,6 +5,11 @@
   text-align: center;
   gap: 15px;
   padding: 25px 15px;
+  background-color: white;
+}
+
+.right-column {
+  background-color: white;
 }
 
 /* IMAGE */
