@@ -17,171 +17,154 @@
   </head>
   <body>
     <div id="header"></div>
-    <!--========== team section ===========-->
-    <!--
-  <section class="team-section">
-    <div class="team-header">
-      <h2 class="reveal">Meet Our Team</h2>
-      <p class="reveal">The dedicated professionals behind DianaMik Hospital Management Consultancy LLP</p>
-    </div>
 
-    <div class="team-container">
-      <div class="team-card reveal">
-        <img src="/assets/images/drHardik.png" alt="Dr Hardik V Barot" />
-        <h3>Dr. Hardik V Barot</h3>
-        <p>Director</p>
-      </div>
+    <!-- Team Section - Modern Vertical Flowchart -->
+    <section class="org-hierarchy">
+      <div class="container">
+        <!-- Header -->
+        <div class="org-header">
+          <span class="org-badge">Organization Structure</span>
+          <h2>Leadership & Department Hierarchy</h2>
+          <p>
+            A comprehensive view of DianaMik's organizational structure, from
+            leadership to specialized teams.
+          </p>
+        </div>
 
-      <div class="team-card reveal">
-        <img src="/assets/images/bharti.jpg" alt="Ms. Bharti H Barot" />
-        <h3>Ms. Bharti H Barot</h3>
-        <p>Director</p>
-      </div>
+        <!-- Executive Level -->
+        <div class="hierarchy-level executive-level">
+          <div class="hierarchy-connector top"></div>
+          <div class="exec-box">
+            <div class="exec-content">
+              <p class="exec-label">EXECUTIVE LEADERSHIP</p>
+              <h2>Dr Hardik V Barot & Bharti Diwakar</h2>
+              <p class="exec-subtitle">Directors & Founders</p>
+            </div>
+          </div>
+          <div class="hierarchy-connector bottom"></div>
+        </div>
 
-      <div class="team-card reveal">
-        <img src="/assets/images/rahul.jpg" alt="Mr. Rahul Patel" />
-        <h3>Mr. Rahul Patel</h3>
-        <p>CEO</p>
-      </div>
-
-      <div class="team-card reveal">
-        <img src="/assets/images/chahat.jpg" alt="Chahat Diwakar" />
-        <h3>Chahat Diwakar</h3>
-        <p>Cashless Processing Head</p>
-      </div>
-
-      <div class="team-card reveal">
-        <img src="/assets/images/abhitesh.jpg" alt="Abhitesh Kharwal" />
-        <h3>Abhitesh Kharwal</h3>
-        <p>Manager</p>
-      </div>
-
-      
-
-      <div class="team-card reveal">
-        <img src="/assets/images/krunal.jpg" alt="Mr. Krunal Solanki" />
-        <h3>Mr. Krunal Solanki</h3>
-        <p>Accreditation Coordinator</p>
-      </div>
-
-      <div class="team-card reveal">
-        <img src="/assets/images/vijay.jpg" alt="Mr Vijay Salat" />
-        <h3>Mr. Vijay Salat</h3>
-        <p>Empanelment & Processing Executive</p>
-      </div>
-
-      <div class="team-card reveal">
-        <img src="/assets/images/kiran.jpg" alt="Mr. Kiran Prajapati" />
-        <h3>Mr. Kiran Prajapati</h3>
-        <p>NABH Consultant & Team Leader</p>
-      </div>
-
-      <div class="team-card reveal">
-        <img src="/assets/images/user.png" alt="Mahima Indora" />
-        <h3>Mahima Indora</h3>
-        <p>Marketing Executive</p>
-      </div>
-
-    </div>
-  </section>
-
-  <script>
-    // Reveal on scroll animation
-    const reveals = document.querySelectorAll(".reveal");
-    window.addEventListener("scroll", () => {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 120;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    });
-  </script>
-  -->
-    <!-- oraganogram -->
-    <div class="dianamik-wrapper">
-      <ul class="dianamik-tree">
-        <li>
-          <div class="node head">
-            <strong>Dr. Hardik Barot + Bharti Barot</strong><br />
-            <small>(Director)</small>
+        <!-- Department Grid -->
+        <div class="departments-grid">
+          <!-- NABH -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3>NABH Experts</h3>
+              <ul class="dept-roles">
+                <li>NABH Application Specialist</li>
+                <li>NABH Training & NC Solution Specialist</li>
+              </ul>
+            </div>
           </div>
 
-          <ul>
-            <li>
-              <div class="node branch">NABH Experts</div>
-              <ul>
-                <li><div class="node">NABH Application Specialist</div></li>
-                <li>
-                  <div class="node">NABH Training & NC Solution Specialist</div>
-                </li>
+          <!-- JCI -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3>JCI Expert</h3>
+              <ul class="dept-roles">
+                <li>JCI Application Team</li>
+                <li>JCI Training and NC Solution Specialist</li>
               </ul>
-            </li>
+            </div>
+          </div>
 
-            <li>
-              <div class="node branch">JCI Expert</div>
-              <ul>
-                <li><div class="node">JCI Application Team</div></li>
-                <li>
-                  <div class="node">
-                    JCI Training and NC Solution Specialist
-                  </div>
-                </li>
+          <!-- NABL -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h3>NABL Experts</h3>
+              <ul class="dept-roles">
+                <li>NABL Application Specialist</li>
+                <li>NABL Training & NC Solution Specialist</li>
               </ul>
-            </li>
+            </div>
+          </div>
 
-            <li>
-              <div class="node branch">NABL Experts</div>
-              <ul>
-                <li><div class="node">NABL Application Specialist</div></li>
-                <li>
-                  <div class="node">NABH Training & NC Solution Specialist</div>
-                </li>
+          <!-- TPA -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3>TPA & Govt. Scheme Empanelment</h3>
+              <ul class="dept-roles">
+                <li>Cashless Processing Team</li>
+                <li>Empanelment Team</li>
               </ul>
-            </li>
+            </div>
+          </div>
 
-            <li>
-              <div class="node branch">TPA & Govt. Scheme Empanelment</div>
-              <ul>
-                <li><div class="node">Cashless Processing Team</div></li>
-                <li><div class="node">Empanelment Team</div></li>
+          <!-- Hospital Planning -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>Hospital Planning Expert</h3>
+              <ul class="dept-roles">
+                <li>Hospital Architect Team</li>
+                <li>Co-Ordinators</li>
               </ul>
-            </li>
+            </div>
+          </div>
 
-            <li>
-              <div class="node branch">Hospital Planning Expert</div>
-              <ul>
-                <li><div class="node">Hospital Architect Team</div></li>
-                <li><div class="node">Co-Ordinators</div></li>
+          <!-- Clinical Trial -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-microscope"></i>
+              </div>
+              <h3>Clinical Trial Management</h3>
+              <ul class="dept-roles">
+                <li>Clinical Trial Team</li>
               </ul>
-            </li>
+            </div>
+          </div>
 
-            <li>
-              <div class="node branch">Clinical Trial Manage</div>
-              <ul>
-                <li><div class="node">Clinical Trial Team</div></li>
+          <!-- Medico-Legal -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <h3>Medico-legal Expert</h3>
+              <ul class="dept-roles">
+                <li>Lawyer Team</li>
               </ul>
-            </li>
+            </div>
+          </div>
 
-            <li>
-              <div class="node branch">Medico-legal Expert</div>
-              <ul>
-                <li><div class="node">Lawyer Team</div></li>
+          <!-- Finance -->
+          <div class="dept-block">
+            <div class="dept-connector"></div>
+            <div class="dept-content">
+              <div class="dept-icon-wrapper">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h3>Finance & Account</h3>
+              <ul class="dept-roles">
+                <li>Finance Team</li>
               </ul>
-            </li>
-
-            <li>
-              <div class="node branch">Finance & Account</div>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ========== FOOTER SECTION ========== -->
     <div id="footer"></div>

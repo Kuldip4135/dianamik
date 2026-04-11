@@ -1,30 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
   const galleryGrid = document.getElementById("gallery-grid");
+  const certificatesGrid = document.getElementById("certificates-grid");
 
-  const totalImages = 39;
-  const images = Array.from({ length: totalImages }, (_, i) => `/gallery/images/image${i + 1}.jpg`);
+  const prefix = "/gallery/images/";
 
-  // Generate images
-  images.forEach((src, index) => {
+  // Generate Certificates
+  const certificateCount = 3;
+  for (let i = 1; i <= certificateCount; i++) {
+    const item = document.createElement("div");
+    item.classList.add("certificate-card");
+    item.innerHTML = `
+      <img src="${prefix}certificate${i}.jpg" alt="Certificate ${i}" loading="lazy">
+    `;
+    if (certificatesGrid) certificatesGrid.appendChild(item);
+  }
+
+  // Generate Gallery Images using a loop
+  for (let i = 2; i <= 45; i++) {
+    let ext = ".jpg";
+    const src = prefix + "image" + i + ext;
     const item = document.createElement("div");
     item.classList.add("masonry-item");
     item.innerHTML = `
-      <img src="${src}" alt="Gallery Image ${index + 1}" loading="lazy">
+      <img src="${src}" alt="Gallery Image ${i}" loading="lazy">
     `;
-    galleryGrid.appendChild(item);
-  });
+    if (galleryGrid) galleryGrid.appendChild(item);
+  }
 
   // Lightbox
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.querySelector(".close");
 
-  galleryGrid.addEventListener("click", (e) => {
+  const openLightbox = (e) => {
     if (e.target.tagName === "IMG") {
       lightbox.style.display = "flex";
       lightboxImg.src = e.target.src;
     }
-  });
+  };
+
+  if (galleryGrid) galleryGrid.addEventListener("click", openLightbox);
+  if (certificatesGrid)
+    certificatesGrid.addEventListener("click", openLightbox);
 
   closeBtn.addEventListener("click", () => (lightbox.style.display = "none"));
   lightbox.addEventListener("click", (e) => {
