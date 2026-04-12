@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Generate Gallery Images using a loop
-  for (let i = 2; i <= 45; i++) {
+  for (let i = 1; i <= 44; i++) {
     let ext = ".jpg";
     const src = prefix + "image" + i + ext;
     const item = document.createElement("div");
